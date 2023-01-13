@@ -22,17 +22,18 @@ const ModalProducto = () => {
   //Comprobar si el Modal actual esta en el pedido
 
   return (
-    <div className="md:flex gap-10">
+    <div className="md:flex gap-10 sm:mt-0 mt-7">
       <div className="md:w-1/3">
         <Image
           width={300}
           height={400}
           alt={`Imagen Producto ${producto.nombre}`}
           src={`/assets/img/${producto.imagen}.jpg`}
+          className={` sm:mx-0 mx-auto`}
         />
       </div>
       <div className="md:w-2/3">
-        <div className="flex justify-end">
+        <div className="sm:flex sm:justify-end sm:relative absolute top-4 sm:top-0 right-3 sm:right-0">
           <button onClick={handleChangeModal}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,10 +52,10 @@ const ModalProducto = () => {
           </button>
         </div>
         <h1 className="text-2xl font-bold mt-5">{producto.nombre}</h1>
-        <p className="mt-5 font-black text-4xl text-amber-500">
+        <p className="mt-5 font-black text-4xl text-amber-500 text-center sm:text-start">
           {formatearDinero(producto.precio)}
         </p>
-        <div className="flex gap-4 mt-5">
+        <div className="flex gap-4 mt-5 justify-center sm:justify-start">
           <button
             type="button"
             onClick={() => {
@@ -103,7 +104,7 @@ const ModalProducto = () => {
         </div>
         <button
           type="button"
-          className="bg-indigo-600 hover:bg-indigo-800 px-5 mt-5 text-white font-bold rounded uppercase py-2"
+          className="bg-indigo-600 hover:bg-indigo-800 px-5 mt-5 text-white font-bold rounded uppercase py-2 sm:w-auto w-full"
           onClick={() => handleAgregarPedido({ ...producto, cantidad })}
         >
           {edicion ? "Guardar Cambios" : "Añadir al Pedido"}

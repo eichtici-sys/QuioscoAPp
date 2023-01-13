@@ -30,11 +30,11 @@ export default function Layout({ children, pagina }) {
         <meta name="description" content="Quiosco Cafetería" />
       </Head>
       <div className="md:flex">
-        <aside className="md:w-4/12 xl:w-1/4 2xl:w-1/5">
+        <aside className="flex justify-between sm:block md:w-4/12 xl:w-1/4 2xl:w-1/5 sm:pb-0 pb-2">
           <Sidebar />
         </aside>
         <main className="md:w-8/12 xl:w-3/4 2xl:w-4/5 h-screen overflow-y-scroll">
-          <div className="p-10">
+          <div className=" px-0 sm:px-10 pb-10">
             <Pasos />
             {children}
           </div>

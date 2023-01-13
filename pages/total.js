@@ -14,10 +14,10 @@ export default function Total() {
 
   return (
     <Layout pagina={"Total y Confirmar Pedido"}>
-      <h1 className="text-3xl font-black">Total</h1>
-      <p className="text-xl my-6">Confirma tu pedido a continuación</p>
+      <h1 className="text-3xl font-black sm:px-0 px-6 sm:text-start text-center">Total</h1>
+      <p className="text-xl my-6 sm:px-0 px-6 sm:text-start text-center">Confirma tu pedido a continuación</p>
       <form onSubmit={colocarOrden}>
-        <div>
+        <div className="sm:px-0 px-6">
           <label
             htmlFor="nombre"
             className="block uppercase text-slate-800 font-bold text-xl"
@@ -32,13 +32,13 @@ export default function Total() {
             className="bg-gray-100 w-full lg:w-1/3 mt-3 p-2 rounded-md"
           />
         </div>
-        <div className="mt-10">
+        <div className="mt-10 sm:px-0 px-6">
           <p>
             Total a pagar {""}{" "}
             <span className="font-bold">{formatearDinero(total)}</span>
           </p>
         </div>
-        <div className="mt-5">
+        <div className="mt-5 sm:px-0 px-6">
           <input
             type="submit"
             className={`${
